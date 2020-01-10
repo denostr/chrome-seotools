@@ -1,0 +1,22 @@
+{
+    "name": "SEOTool",
+    "version": "0.1",
+    "description": "Extension to help SEO specialist",
+    "manifest_version": 2,
+    "permissions": [
+        "tabs",
+        "https://serpstat.com/*keywords/search/*"
+    ],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": true
+    },
+    "content_scripts": [{
+        "js": [
+            "js/serpstat.js"
+        ],
+        "matches": [
+             "https://serpstat.com/*keywords/search/*"
+        ]
+    }]
+}
