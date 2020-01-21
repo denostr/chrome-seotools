@@ -52,7 +52,7 @@ const copyCheckedKeyword = () => {
 	  .filter((checkbox) => checkbox.checked);
 
     values.forEach((item) => {
-    	selectedItems.push(getNextSibling(item.parentElement, '.link_text').innerHTML.trim());
+    	selectedItems.push(getNextSibling(item.parentElement, '.link_text').innerText.trim());
     });
     copy(selectedItems.join("\r\n"));
 };
